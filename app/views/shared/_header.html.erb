@@ -1,0 +1,41 @@
+<div class="header">
+
+	<ul class="desktop-list">
+		<li class="logo"><%= link_to (image_tag ('logo.png')), root_path %></li>
+		<li class="<%= active_tab_class()%>"></li>
+		<li class="<%= active_tab_class()%>"></li>
+		<li class="user-avatar">
+			<% if current_user %>
+				<% link_to "logout", destroy_user_session_path, method: :delete %>
+				<%= link_to user_products_path, method: :get do %>
+					<%= image_tag('logo.png', style: 'padding: 0px 10px') %> <%= current_user.email %>
+				<% end %>
+			<% else %>
+				<%= link_to "login", new_user_session_path %>
+			<% end %>
+		</li>
+	</ul>
+
+	<div class="menu-collapse" onclick="collapseMobileMenu()">
+		<%= image_tag('menu-responsive.png') %>
+	</div>
+
+	<ul class="mobile-list">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+</div>
+
+<script>
+	function collapseMobileMenu()
+	{
+		list = $(".mobile-list");
+		if(list.css("display") == "none")
+			$(".mobile-list").slideDown();
+		else
+			$(".mobile-list").slideUp();
+	}
+</script>

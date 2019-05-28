@@ -1,0 +1,46 @@
+.search-bar
+{
+	margin: 20px 0px;
+	margin-right: 75%;
+	padding: 15px;
+	background-color: lightgrey;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	input
+	{
+		border: solid 1px grey;
+		font-family: "Montserrat";
+		width:98%;
+		font-size: 30px;
+		border-bottom-right-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+}
+
+.products
+{
+	padding: 40px;
+
+	.product
+	{
+
+		.product-image
+		{
+			display: inline-flex;
+			border: solid 2px black;
+		}
+		.product-name
+		{
+			padding: 20px;
+			display: inline-block;
+			font-size: 3em;
+		}
+	}
+}
+
+.options
+{
+	position: relative;
+	float: right;
+	padding: 0px 5%;
+}

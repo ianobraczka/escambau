@@ -1,0 +1,22 @@
+<div class="create-product-form">
+	
+	<h1 class="title">Criar novo produto</h1>
+	
+	<%= form_for @product, url: products_path, html: { method: :post } do |f| %>
+	  
+	  <div class="field">
+	  	Nome: <%= f.text_field :name %>
+	  </div>
+
+	  <div class="field">
+	  	Descrição: <%= f.text_field :description %>
+	  </div>
+
+	  <div class="field">
+	  	Image: <%= f.file_field :image %>
+	  </div>
+
+	  <%= f.submit "Criar" %>
+	<% end %>
+</div>
+

@@ -1,0 +1,22 @@
+<div class="sub-header">
+	Meus produtos
+</div>
+
+<div class="products">
+	<% @products.each do |product| %>
+		
+		<div class="product">
+			<div class="product-image">
+				<%= image_tag(product.image_url, size: '100x125') %>
+			</div>
+			<div class="product-name">
+				<%= product.name %>
+			</div>
+		</div>
+
+	<% end %>
+</div>
+
+<div class="options">
+	<%= link_to "Novo produto", new_product_path %>
+</div>
