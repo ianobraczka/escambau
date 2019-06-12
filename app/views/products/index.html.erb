@@ -1,18 +1,21 @@
-<div class="search-bar">
-	<input class=""></input>
+<div class="filter">
+	<div class="search-bar">
+		<input class="" placeholder="o que queres?"></input>
+	</div>
 </div>
 
 <div class="products">
 	<% @products.each do |product| %>
-		
-		<div class="product">
-			<div class="product-image">
-				<%= image_tag(product.image_url, size: '100x125') %>
+		<%= link_to product do %>
+			<div class="product">
+				<div class="product-image">
+					<%= image_tag(product.image_url, size: '100x125') %>
+				</div>
+				<div class="product-name">
+					<%= product.name %>
+				</div>
 			</div>
-			<div class="product-name">
-				<%= product.name %>
-			</div>
-		</div>
+		<% end %>
 
 	<% end %>
 </div>

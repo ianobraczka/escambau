@@ -1,29 +1,58 @@
-.search-bar
+input:focus,
+select:focus,
+textarea:focus,
+button:focus 
 {
-	margin: 20px 0px;
-	margin-right: 75%;
-	padding: 15px;
-	background-color: lightgrey;
-	border-bottom-right-radius: 20px;
-	border-top-right-radius: 20px;
-	input
+    outline: none;
+}
+
+.filter
+{
+	text-align: center;
+	.search-bar
 	{
-		border: solid 1px grey;
-		font-family: "Montserrat";
-		width:98%;
-		font-size: 30px;
+		margin: 2% 30%;
+		padding: 15px;
+		background-color: lightgrey;
 		border-bottom-right-radius: 20px;
 		border-top-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		border-top-left-radius: 20px;
+		input
+		{
+			color: grey;
+			text-align: center;
+			padding-left: 10px;
+			border: solid 1px lightgrey;
+			font-family: "Montserrat";
+			width:98%;
+			font-size: 30px;
+			border-bottom-right-radius: 20px;
+			border-top-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			border-top-left-radius: 20px;
+		}
 	}
 }
 
 .products
 {
 	padding: 40px;
-
+	text-align: center;
 	.product
 	{
-
+		text-align: left;
+		display: inline-block;
+		width: 40%;
+		margin: 20px;
+		padding: 20px;
+		border-radius: 20px;
+		cursor: pointer;
+		text-decoration: none !important;
+		&:hover
+		{
+			background-color: lightgrey;
+		}
 		.product-image
 		{
 			display: inline-flex;
@@ -31,7 +60,8 @@
 		}
 		.product-name
 		{
-			padding: 20px;
+			color: black;
+			padding-left: 20px;
 			display: inline-block;
 			font-size: 3em;
 		}
