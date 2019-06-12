@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 	# GET methods
 
 	def show
-		@product = Product.find(params[:id])
+		@product = Product.friendly.find(params[:id])
 	end
 
 	def index

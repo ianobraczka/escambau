@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.0'
 
+# Friendly ID for friendly routes and slugs
+gem 'friendly_id', '~> 5.2.4'
 # Devise for user's authentication
 gem 'devise'
 # Carrierwave for image and video upload

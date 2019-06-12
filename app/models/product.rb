@@ -1,5 +1,8 @@
 class Product < ApplicationRecord
   
+  	extend FriendlyId
+  	friendly_id :name, use: :slugged
+  	
 	# Relations
   	belongs_to :user
   	belongs_to :category
