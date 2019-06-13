@@ -1,0 +1,13 @@
+<div class="sub-header">
+	<%= @product.name %>
+</div>
+
+<div class="container">
+	<div class="left">
+		<%= image_tag(@product.image.to_s) %>
+	</div>
+
+	<div class="right">
+		<%= @product.description %>
+	</div>
+</div>
