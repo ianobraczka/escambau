@@ -1,13 +1,32 @@
-<div class="sub-header">
-	<%= @product.name %>
-</div>
-
-<div class="container">
-	<div class="left">
-		<%= image_tag(@product.image.to_s) %>
+<div class="product">
+	<div class="sub-header">
+		<%= @product.name %>
+		<br>
+		<div class="user-info">por <%= link_to @product.user.name, users_show_url(id: @product.user.id) %></div>
 	</div>
 
-	<div class="right">
-		<%= @product.description %>
+	<div class="container">
+		<div class="left">
+			<%= image_tag(@product.image.to_s) %>
+		</div>
+
+		<div class="right">
+			<div class="description">
+				<%= @product.description %>
+			</div>
+			<div class="state">
+				novo
+			</div>
+			<div class="location">
+				
+			</div>
+			<div class="wants">
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="options">
+		<%= button_to "Fazer proposta", make_bid_path, method: :get, id: @product.id, class: "round" %>
 	</div>
 </div>

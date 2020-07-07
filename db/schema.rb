@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_105628) do
+ActiveRecord::Schema.define(version: 2019_06_13_143921) do
+
+  create_table "bids", force: :cascade do |t|
+    t.integer "requesting_user_id"
+    t.integer "requested_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["requested_user_id"], name: "index_bids_on_requested_user_id"
+    t.index ["requesting_user_id"], name: "index_bids_on_requesting_user_id"
+  end
+
+  create_table "bids_products", id: false, force: :cascade do |t|
+    t.integer "product_id", null: false
+    t.integer "bid_id", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"

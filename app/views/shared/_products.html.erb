@@ -1,0 +1,12 @@
+<% @products.each do |product| %>
+	<%= link_to product do %>	
+		<div class="product">
+			<div class="product-image">
+				<%= image_tag(product.image_url, size: '100x125') %>
+			</div>
+			<div class="product-name">
+				<%= product.name %>
+			</div>
+		</div>
+	<% end %>
+<% end %>

@@ -1,18 +1,23 @@
 <div class="filter">
 	<div class="search-bar">
-		<input class="" placeholder="o que queres?"></input>
+		<input class="" placeholder="o que você procura?"></input>
 	</div>
 </div>
 
 <div class="products">
 	<% @products.each do |product| %>
-		<%= link_to product do %>
-			<div class="product">
-				<div class="product-image">
-					<%= image_tag(product.image_url, size: '100x125') %>
-				</div>
+		<%= link_to product, class: "product" do %>
+			<div class="product-image">
+				<%= image_tag(product.image_url, size: '100x125') %>
+			</div>
+			<div class="product-info">
 				<div class="product-name">
 					<%= product.name %>
+				</div>
+				<div class="other">
+					<%= product.user.name %>
+					<br>
+					tijuca, rio de janeiro
 				</div>
 			</div>
 		<% end %>
@@ -21,5 +26,5 @@
 </div>
 
 <div class="options">
-	<%= link_to "Criar produto", new_product_path %>
+	<%= link_to "Tenho algo para trocar!", new_product_path, class: "round" %>
 </div>

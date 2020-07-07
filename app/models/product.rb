@@ -6,6 +6,7 @@ class Product < ApplicationRecord
 	# Relations
   	belongs_to :user
   	belongs_to :category
+  	has_and_belongs_to_many :bids
 
   	# Uploaders
  	mount_uploader :image, ImageUploader

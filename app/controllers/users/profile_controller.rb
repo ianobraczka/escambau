@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Users::ProfileController < ApplicationController
 
 	before_action :authenticate_user!
 
@@ -6,4 +6,7 @@ class UsersController < ApplicationController
 		@products = Product.where(user_id: current_user.id)
 	end
 
+	def bids
+	end
+	
 end

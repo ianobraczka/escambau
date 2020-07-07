@@ -1,0 +1,16 @@
+<div class="bid-form">
+	
+	<h1 class="title"> Proposta </h1>
+	
+	<%= form_for @bid, url: bids_path, html: { method: :post } do |f| %>
+	  
+	  <div class="field">
+	  	<%= @requested_product.name %> por  <%= f.collection_select :product_ids, @products, :id, :name %>
+	  </div>
+
+	  <%= f.hidden_field :requesting_user_id, value: current_user.id %>
+	  <%= f.hidden_field :requested_user_id, value: @requested_product.user.id %>
+
+	  <%= f.submit "Criar" %>
+	<% end %>
+</div>

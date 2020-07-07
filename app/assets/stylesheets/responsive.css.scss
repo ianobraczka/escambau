@@ -1,0 +1,16 @@
+@media(max-width: 1000px)
+{
+    .menu-collapse
+    {
+        display: block !important;
+    }
+    .desktop-list
+    {
+    	display: none !important;
+    }
+
+    input
+    {
+    	font-size: 15px !important;
+    }
+}

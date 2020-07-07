@@ -1,0 +1,21 @@
+.footer
+{	
+	background-color: white;
+	color: black;
+	margin-top: -5px;
+	text-align: center;
+	min-height: 50px;
+	padding: 30px;
+	text-transform: uppercase;
+	font-family: "Montserrat";
+	.users-link-area
+	{
+		display: inline;
+	    position: absolute;
+	    right: 2%;
+	}
+	.text
+	{
+		display: inline;
+	}
+}

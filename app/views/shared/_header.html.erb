@@ -4,14 +4,26 @@
 		<li class="logo"><%= link_to (image_tag ('logo.png')), root_path %></li>
 		<li class="<%= active_tab_class()%>"></li>
 		<li class="<%= active_tab_class()%>"></li>
-		<li class="user-avatar">
+		<li class="user-avatar" style="margin-top:5px">
 			<% if current_user %>
-				<% link_to "logout", destroy_user_session_path, method: :delete %>
-				<%= link_to user_products_path, method: :get do %>
-					<%= image_tag('logo.png', style: 'padding: 0px 10px') %> <%= current_user.email %>
-				<% end %>
+				<div class="collapser" onclick="collapseUserMenu()">
+					<% if current_user.image.url %>
+						<%= image_tag(current_user.image.url, style: 'padding: 0px 10px') %>
+					<% else %>
+						<%= image_tag('unimaged-user.jpg', style: 'padding: 0px 10px') %>
+					<% end %>
+					<%= current_user.name %>
+				</div>
+				<div class="user-menu">
+						<ul>
+							<li><%= link_to "meus produtos", users_products_path %></li>
+							<li><%= link_to "minhas trocas", users_bids_path %></li>
+							<li><%= link_to "informações", users_edit_path %></li>
+							<li><%= link_to "sair", destroy_user_session_path, method: :delete %></li>
+						</ul>
+					</div>
 			<% else %>
-				<%= link_to "login", new_user_session_path %>
+				<%= link_to "entrar", new_user_session_path %>
 			<% end %>
 		</li>
 	</ul>
@@ -38,4 +50,18 @@
 		else
 			$(".mobile-list").slideUp();
 	}
+
+	function collapseUserMenu()
+	{
+		menu = $('.user-menu')
+		if(menu.css("display") == "none")
+		{
+			menu.slideDown();
+		}
+		else
+		{
+			menu.slideUp();
+		}
+	}
+
 </script>

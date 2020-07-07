@@ -1,0 +1,30 @@
+<div class="sub-header">
+	Meus produtos
+</div>
+
+<div class="products">
+	<% unless @products.empty? %>
+		<% @products.each do |product| %>
+			<%= link_to product do %>	
+				<div class="product">
+					<div class="product-image">
+						<%= image_tag(product.image_url, size: '100x125') %>
+					</div>
+					<div class="product-info">
+						<div class="product-name">
+							<%= product.name %>
+						</div>
+						<div class="other">
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	<% else %>
+		Você ainda não cadastrou nenhum produto ou serviço.
+	<% end %>
+</div>
+
+<div class="options">
+	<%= link_to "Tenho algo para oferecer!", new_product_path, class: "round" %>
+</div>

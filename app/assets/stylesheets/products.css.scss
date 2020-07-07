@@ -8,25 +8,28 @@ button:focus
     outline: none;
 }
 
+.round
+{
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+}
+
 .filter
 {
 	text-align: center;
 	.search-bar
 	{
-		margin: 2% 30%;
 		padding: 15px;
 		background-color: lightgrey;
-		border-bottom-right-radius: 20px;
-		border-top-right-radius: 20px;
-		border-bottom-left-radius: 20px;
-		border-top-left-radius: 20px;
 		input
 		{
 			color: grey;
 			text-align: center;
 			border: solid 1px lightgrey;
 			font-family: "Montserrat";
-			width:98%;
+			width:50%;
 			font-size: 30px;
 			border-bottom-right-radius: 20px;
 			border-top-right-radius: 20px;
@@ -59,44 +62,105 @@ button:focus
 			display: inline-flex;
 			border: solid 2px black;
 		}
-		.product-name
+		.product-info
 		{
 			color: black;
 			padding-left: 20px;
 			display: inline-block;
 			font-size: 3em;
+			.product-name
+			{
+				margin-bottom: 30px;
+			}
+			.other
+			{
+				font-size: 20px;
+			}
 		}
 	}
 }
 
 .options
 {
-	position: relative;
-	float: right;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	text-align: center;
 	padding: 0px 5%;
+	a
+	{
+		color: black;
+		background-color: lightgrey;
+		padding: 15px;
+		&:hover
+		{
+			background-color: #70B756;
+		}
+	}
+	input
+	{
+		font-family: "Montserrat";
+		border:none;
+		color: black;
+		background-color: lightgrey;
+		padding: 15px;
+		&:hover
+		{
+			background-color: #70B756;
+		}
+	}
 }
 
 /* PRODUCT#SHOW */
 
-.container
+.product
 {
-	vertical-align: middle;
-	padding: 50px 30px;
-	.left
+	text-align: center;
+	.container
 	{
-		display: inline-block;
-		width: 40%;
-		img
+		vertical-align: middle;
+		padding: 50px 30px;
+		.left
 		{
-			width: 15em;
-			height: 15em;
+			padding: 20px;
+			display: inline-block;
+			height: 500px;
+    		width: 500px;
+			img
+			{
+				max-width: 100%;
+    			max-height: 100%;
+			}
+		}
+		.right
+		{
+			padding: 20px;
+			margin: 20px;
+			vertical-align: top;
+			display: inline-block;
+			width: 40%;
+			.description
+			{	
+				display: block;
+				text-align: left;
+			}
 		}
 	}
-	.right
-	{
-		display: inline-block;
-		width: 40%;
-	}
+}
+
+
+.portrait {
+    height: 80px;
+    width: 30px;
+}
+
+.landscape {
+    height: 30px;
+    width: 80px;
+}
+
+.square {
+    height: 75px;
+    width: 75px;
 }
 
 

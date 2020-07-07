@@ -6,4 +6,12 @@ module ApplicationHelper
     	active ? 'active' : ''  
 	end  
 	
+	def user_products
+		if current_user
+			return current_user.products
+		else
+			return nil
+		end
+	end
+
 end

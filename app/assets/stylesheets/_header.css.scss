@@ -1,0 +1,115 @@
+.header
+{
+	background-color: #70B756;
+	color: white;
+	padding: 20px 0px;
+	font-family: "Montserrat";
+	ul
+	{
+		padding: 20px;
+		display: inline;
+		
+		li
+		{
+			padding: 0px 20px;
+			display: inline;
+			img
+			{
+				vertical-align: middle;
+				max-width: 30px;
+			}
+
+			.collapser
+			{
+				&:hover
+				{
+					font-weight: bold;
+					cursor: pointer;
+				}
+			}
+		}
+		.active
+		{
+			a
+			{
+				color: greenyellow;
+			}
+		}
+		.user-avatar
+		{
+			padding-right: 30px;
+			float: right;
+			.user-menu
+			{
+				margin-top: 20px;
+				right: 0px;
+				border: solid 1px white;
+				opacity: 0.7;
+				background-color: #70B756;
+				position: absolute;
+				display: none;
+				text-align: center;
+				ul
+				{
+					display: block;
+					padding: 10px;
+					li
+					{
+						display: block;
+						padding: 5px 0px;
+						&:hover
+						{
+							font-weight: bold;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}		
+	}	
+	a
+	{
+		color: white;
+		font-family: inherit;
+		text-decoration: none;
+	}
+	.menu-collapse
+	{
+		display: none;
+		text-align: center;
+		cursor: pointer;
+		img
+		{
+			width: 75px;
+		}
+	}
+	.mobile-list
+	{
+		display: none;
+		padding: 0px 10px;
+		margin: 0px 10px;
+		li
+		{
+			padding: 5px 0px;
+			text-align: center;
+			display: block;
+		}
+	}
+}
+
+.sub-header
+{
+	font-size: 2em;
+	text-transform: uppercase;
+	padding: 40px;
+	margin: 0% 35%;
+	text-align: center;
+	background-color: lightgrey;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	.user-info
+	{
+		margin-top: 10px;
+		font-size: 12px;
+	}
+}
